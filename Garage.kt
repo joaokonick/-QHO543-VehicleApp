@@ -14,4 +14,10 @@ class Garage {
             vehicle.displayInfo()
         }
     }
+
+    fun accelerateAll(amount: Int) {
+        for (vehicle in vehicles) {
+            vehicle.accelerate(amount)
+        }
+    }
 }

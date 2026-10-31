@@ -14,9 +14,7 @@ fun main() {
 
     garage.displayVehicles()
 
-    val found = garage.findVehicleByBrand("Honda")
-    if (found != null) {
-        print("Found: ")
-        found.displayInfo()
-    }
+    println("After accelerating all by 10:")
+    garage.accelerateAll(10)
+    garage.displayVehicles()
 }

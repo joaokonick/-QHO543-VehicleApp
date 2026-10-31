@@ -1,18 +1,22 @@
 
-fun main(){
-    val vehicles = mutableListOf<Vehicle>()
+fun main() {
+    val garage = Garage()
 
     val car = Car("Toyota", 4)
     car.accelerate(60)
     car.brake(10)
-    vehicles.add(car)
+    garage.addVehicle(car)
 
     val motorcycle = Motorcycle("Honda", false)
     motorcycle.accelerate(80)
     motorcycle.brake(20)
-    vehicles.add(motorcycle)
+    garage.addVehicle(motorcycle)
 
-    for (vehicle in vehicles) {
-        vehicle.displayInfo()
+    garage.displayVehicles()
+
+    val found = garage.findVehicleByBrand("Honda")
+    if (found != null) {
+        print("Found: ")
+        found.displayInfo()
     }
-}                                  
+}
